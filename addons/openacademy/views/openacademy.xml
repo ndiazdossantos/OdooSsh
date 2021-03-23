@@ -5,14 +5,21 @@
         <field name="model">openacademy.course</field>
         <field name="arch" type="xml">
             <form string="Course Form">
-                <sheet>
-                    <group>
-                        <field name="name"/>
-                        <field name="description"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
+                 <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                            <page string="About">
+                               ejemplo notebook
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
     </record>
 
 
