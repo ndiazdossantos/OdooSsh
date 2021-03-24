@@ -48,6 +48,7 @@ class Session(models.Model):
     start_date = fields.Date(default=fields.Date.today)
     duration = fields.Float(digits=(6, 2), help="Duration in days")
     active = fields.Boolean(default=True)
+    color = fields.Integer()
     seats = fields.Integer(string="Number of seats")
 
     instructor_id = fields.Many2one('res.partner', string="Instructor",
