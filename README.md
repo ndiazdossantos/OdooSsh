@@ -35,3 +35,4 @@ _Todos los errores serán visualizados como una alerta al usuario_
 
 _![Informe2](https://i.imgur.com/dGJSzYm.png)_
 
+[README.md](README.md) de Noé Díaz Dos Santos para el repositorio [OdooSsH](https://github.com/ndiazdossantos/OdooSsh)
