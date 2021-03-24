@@ -21,7 +21,7 @@
     'version': '1.32',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'report'],
+    'depends': ['base'],
 
     # always loaded
     'data': [
