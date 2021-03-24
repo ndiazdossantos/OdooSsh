@@ -198,5 +198,25 @@
         <menuitem id="session_menu" name="Sessions"
                   parent="openacademy_menu"
                   action="session_list_action"/>
+        <record model="ir.ui.view" id="wizard_form_view">
+            <field name="name">wizard.form</field>
+            <field name="model">openacademy.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Add Attendees">
+                    <group>
+                        <field name="session_id"/>
+                        <field name="attendee_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="launch_session_wizard" model="ir.actions.act_window">
+            <field name="name">Add Attendees</field>
+            <field name="res_model">openacademy.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_openacademy_session"/>
+        </record>
 
 </odoo>
