@@ -29,6 +29,16 @@ class Session(models.Model):
         ondelete='cascade', string="Course", required=True)
     attendee_ids = fields.Many2many('res.partner', string="Attendees")
 
+    taken_seats = fields.Float(string="Taken seats", compute='_taken_seats')
+
+    @api.depends('seats', 'attendee_ids')
+    def _taken_seats(self):
+        for r in self:
+            if not r.seats:
+                r.taken_seats = 0.0
+            else:
+                r.taken_seats = 100.0 * len(r.attendee_ids) / r.seats
+
 
 # -*- coding: utf-8 -*-
 
