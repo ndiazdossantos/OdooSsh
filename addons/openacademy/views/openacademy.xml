@@ -134,9 +134,10 @@
             <field name="name">session.gantt</field>
             <field name="model">openacademy.session</field>
             <field name="arch" type="xml">
-                <gantt string="Session Gantt"
-                       date_start="start_date" date_stop="end_date"
+                <gantt string="Session Gantt" color="course_id"
+                       date_start="start_date" date_delay="hours"
                        default_group_by='instructor_id'>
+                    <field name="name"/>
                 </gantt>
             </field>
         </record>
