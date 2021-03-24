@@ -14,7 +14,6 @@ class Course(models.Model):
     session_ids = fields.One2many(
         'openacademy.session', 'course_id', string="Sessions")
 
-    @api.multi
     def copy(self, default=None):
         default = dict(default or {})
 
